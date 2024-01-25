@@ -11,6 +11,14 @@ import os
 
 
 # CHANGELOG:
+
+# V4.0:
+# -Precalculates the trig functions so they only have to be done once instead of multiple points. Helps lots on performance
+# -Adding the precalculting optimization allows leeway to calculate rotations on all 3 axes now instead of just X and Y
+# -Added CHECK_DEPTH and DOF. Using this feature will tell the points to not render if they are a certain distance away on the Z axis.
+# 	This feature is mostly useful for spherical shapes to prevent rendering their backside so they don't appear to be see-through
+
+# V4.1:
 # -Added TARGET_FPS variable to try to improve performance
 # -Accidentally switched the rotXVar and rotYVar inputs in old versions, fixed now
 # -Now also precalculates the multipliers for the final matrix multiplication to squeeze out some performance
